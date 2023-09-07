@@ -1,0 +1,19 @@
+JVM是Java平台无关性实行的关键
+java virtual machine java虚拟机
+jdk
+java development kit java软件开发工具包
+JRE
+java runtime environment（包括jvm，java核心类库和支持文件
+只需要运行，下载jre，要开发，下jdk
+jdk》jre〉jvm
+
+javac HelloImooc.java
+java HelloImooc
+
+echo $PATH
+vi .bash_profile
+打开后输入i进行编辑
+
+编辑结束，点击esc，然后输入：wq退出
+source .bash_profile
+执行编辑后的文档，没报错就成功添加路径，配置成功
