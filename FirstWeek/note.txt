@@ -17,3 +17,15 @@ vi .bash_profile
 编辑结束，点击esc，然后输入：wq退出
 source .bash_profile
 执行编辑后的文档，没报错就成功添加路径，配置成功
+
+导入后乱码问题：
+工程名右键。properties
+resource-- text file encoding，默认是gbk，改成utf-8
+
+Pascal命名法----类名定义
+
+数据类型
+    基本数据类型（）
+    引用数据类型（类class，接口interface，数组）
+
+'\n'  (换行)
