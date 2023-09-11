@@ -25,14 +25,15 @@ public class ScoreManage {
 	public float[] initScore() { 
 		Scanner sc = new Scanner(System.in);
 		//接收数组的长度
+		int arrLength=0;
 		System.out.print("请指定数组的长度：");
-		int arrLength = sc.nextInt();
+		arrLength = sc.nextInt();
 		float[] a = new float[arrLength];
 		//接收数据
 		for(int i = 0; i < a.length; i++) {
 			System.out.print("请输入第" + (i+1) + "个数据：");
 			try {
-				a[i] = sc.nextInt();
+				a[i] = sc.nextFloat();
 			}catch(InputMismatchException e) {
 				System.out.println("输入的数据格式有误，不能有非数字。");
 				sc.next();
