@@ -1,0 +1,78 @@
+mysql -uroot -p
+show databases
+net stop mysql80 //停掉mysql服务
+unsigned 无符号
+use test //准备使用test数据库
+show tables //看数据库表
+desc student //看表详情：表结构，类型，详情，约束之列
+show create table student //看创建student表的时候的sql语句
+
+alter table student
+add xx 类型 约束 注释
+modify xx (修改定义，类型)
+change xx xx1 (改名字)
+drop xx (删除列)
+
+第一范式：原子性
+数据每一列都是不可分割的基本数据项，同一列中不能有多个值，也不能存在重复的属性
+
+第二范式：唯一性
+每条数据必须是唯一的
+
+第三范式：关联性
+每列都与主键有直接联系，不存在依赖传递
+数据可以拆分到不同的数据表，彼此保持关联
+
+设置主键并自增
+id int primary key auto_increment
+
+非空约束，并加默认值
+married boolean not null default false
+
+外键约束用来保证关联数据的逻辑关系
+foreign key (deptno) references t_dept(deptno); 
+不推荐外键约束的原理：如果形成外键闭环，我们将无法删除任何一张表的记录
+
+ENUM 枚举
+sex enum("男","女") not null  //表示只能取男或女
+
+添加索引
+index idx_type (type)  可以随意命名索引
+create index 索引名称 on 表名（字段）；
+alter table 表名称 add index [索引名](字段);
+show index form 表名 //查看数据表的所有索引
+
+删除索引
+drop index 索引名称 on 表名；
+
+分页
+limit 起始位置，偏移量
+limit 0，20
+如果limit语句只有一个参数，表示的是偏移量，起始值默认为0
+
+去除重复记录
+distinct 字段
+select distinct job form t_emp
+使用distinct的select语句只能查询一列数据，如果查询多列，去除重复记录就会失效
+distinct只能在select语句中使用一次
+
+ifnull(null,0) //如果为空，设为0
+now()  //当前日期
+datediff(d1,d2)  //比较两个日期差距
+工龄大于20 ：
+datediff(now(),hiredate)/365 >= 20;
+REGEXP 正则表达式
+
+not deptno in(10,20);
+
+where语句，把筛选掉记录最多的条件写在前面
+count(*) 获取包含空值的记录数
+count（） 不包含空值
+
+数据库支持多列分组条件，执行的时候逐级分组
+对分组结果集再次进行汇总计算
+with rollup
+group_concat 函数可以把分组查询中的某个字段拼接成一个字符串
+
+用聚合函数来做条件判断时，可以在group by 后跟having子句
+
