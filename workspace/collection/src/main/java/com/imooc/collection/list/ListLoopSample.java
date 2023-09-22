@@ -1,6 +1,7 @@
 package com.imooc.collection.list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -22,6 +23,17 @@ public class ListLoopSample {
         System.out.println(booklist);
 
         for(String book:booklist){
+            System.out.println(book);
+        }
+        System.out.println("=====================");
+        booklist.forEach(book->{
+            System.out.println(book);
+        });
+        System.out.println("=====================");
+        //迭代器
+        Iterator<String> itr = booklist.iterator();
+        while(itr.hasNext()){
+            String book = itr.next();
             System.out.println(book);
         }
     }
