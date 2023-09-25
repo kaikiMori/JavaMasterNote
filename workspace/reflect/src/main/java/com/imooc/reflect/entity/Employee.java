@@ -27,6 +27,7 @@ public class Employee {
         this.ename = ename;
         this.salary = salary;
         this.dname = dname;
+        System.out.println("带参构造方法执行");
     }
 
     @Override
