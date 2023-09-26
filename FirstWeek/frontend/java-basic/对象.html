@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Star = {
+        name: "Judy",
+        age: 19,
+        gender: "man",
+        sayHi: function () {
+          alert("hello~");
+        },
+      };
+
+      console.log(Star.name);
+      console.log(Star["age"]);
+      Star.sayHi();
+
+      for (var k in Star) {
+        console.log(k);
+        console.log(Star[k]);
+      }
+    </script>
+  </body>
+</html>
