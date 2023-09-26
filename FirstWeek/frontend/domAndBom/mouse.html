@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: palegoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      //为div绑定四个事件
+      //鼠标进入事件 "i'm coming in "
+      var div = document.querySelector("div");
+      div.onmouseenter = function () {
+        console.log("i'm coming in ");
+      };
+      //鼠标离开事件 "i'm out"
+      div.onmouseleave = function () {
+        console.log("i'm out ");
+      };
+      //鼠标移动事件 "i'm moving"
+      div.onmousemove = function () {
+        console.log("i'm moving ");
+      };
+      //鼠标点击事件 "be hit"
+      div.onclick = function () {
+        console.log("be hit");
+      };
+    </script>
+  </body>
+</html>

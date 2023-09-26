@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: papayawhip;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="1.jpg" alt="" />
+      <button class="b">before</button>
+      <button class="a">after</button>
+    </div>
+    <script>
+      var arr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+      var a = document.getElementsByClassName("a");
+      var b = document.getElementsByClassName("b");
+      var img = document.querySelector("img");
+      console.dir(img);
+      var i = 0;
+      a.onclick = function () {
+        i++;
+        //如果索引等于6，则重置为0
+        if (i == 6) {
+          i = 0;
+        }
+        img.src = arr[i];
+      };
+      b.onclick = function () {};
+    </script>
+  </body>
+</html>
