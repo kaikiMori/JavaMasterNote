@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <br />
+    <br />
+    <textarea></textarea>
+
+    <script>
+      var input = document.querySelector("input");
+      //在单行文本框傻姑娘注册keydown事件，并将文本框里的内容输出到终端
+      //input.onkeydown = function () {
+      //console.log("keydown------");
+      //this指向事件的调用者，此处this就是input
+      //console.dir(this.value);
+      // };
+      //注册keyup事件
+      //   input.onkeyup = function () {
+      //     console.dir(this.value);
+      //   };
+      //keypress事件
+      //   input.onkeypress = function () {
+      //     console.dir(this.value);
+      //   };
+
+      //多行文本框傻姑娘注册keyup事件，将文本框内容输出到终端
+      document.querySelector("textarea").onkeyup = function () {
+        console.dir(this.value);
+      };
+    </script>
+  </body>
+</html>

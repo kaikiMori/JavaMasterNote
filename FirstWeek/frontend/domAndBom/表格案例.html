@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- has some problems -->
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>gender</th>
+          <th>age</th>
+          <th>doSth</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!-- 将数组做成表格显示在页面上 -->
+    <script>
+      var tbody = document.querySelector("tbody");
+      var userList = [
+        { id: 1, name: "judy", gender: "man", age: 21 },
+        { id: 2, name: "june", gender: "woman", age: 28 },
+        { id: 3, name: "kelly", gender: "woman", age: 39 },
+        {
+          id: 4,
+          name: "chloe",
+          gender: "woman",
+          age: 44,
+        },
+      ];
+
+      //循环数组拼接成字符串形式
+      var str = "";
+      for (var i = 0; i < userList.length; i++) {
+        str +=
+          "<tr><td>" +
+          userList[i].id +
+          "</td><td>" +
+          userList[i].name +
+          "<td/><td>" +
+          userList[i].gender +
+          "<td/><td>" +
+          userList[i].age +
+          "<td/><td><button class='del'>delete<button/><td/><tr/>";
+      }
+      //console.log(str);
+      tbody.innerHTML = str;
+
+      var btns = document.querySelectorAll(".del");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          var check = confirm("are you sure to delete this message?");
+          //找到当前删除按钮对应的tr标签
+          if (check) {
+            var tr = this.parentNode.parentNode;
+            tbody.removeChild(tr);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

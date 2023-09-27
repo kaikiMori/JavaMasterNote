@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #w {
+        width: 900px;
+        height: 100px;
+        background-color: palegoldenrod;
+        margin: 0 auto;
+      }
+      li {
+        width: 20px;
+        height: 20px;
+        float: left;
+        list-style: none;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li style="background-color: palevioletred"></li>
+        <li style="background-color: peachpuff"></li>
+        <li style="background-color: rgb(184, 50, 95)"></li>
+      </ul>
+    </div>
+    <div id="w"></div>
+    <script>
+      //获取要改变的div对象
+      var w = document.querySelector("#w");
+      //获取所有li标签
+      var lis = document.querySelectorAll("li");
+      //循环为每个li绑定点击事件
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+          var bgc = this.style.backgroundColor;
+          w.style.backgroundColor = bgc;
+        };
+      }
+    </script>
+  </body>
+</html>
