@@ -1,0 +1,33 @@
+{
+    "employee": [
+        {
+            "empno": 7369,
+            "ename": "lily",
+            "job": "engineer",
+            "hiredate": "2023-01-01"
+        },
+        {
+            "empno": 7370,
+            "ename": "june",
+            "job": "engineer",
+            "hiredate": "2023-01-01"
+        },
+        {
+            "empno": 7371,
+            "ename": "kitty",
+            "job": "engineer",
+            "hiredate": "2023-01-01",
+            "customers": [
+                {
+                    "cname": "AAjc"
+                },
+                {
+                    "cname": "AAjc"
+                },
+                {
+                    "cname": "AAjc"
+                }
+            ]
+        }
+    ]
+}
